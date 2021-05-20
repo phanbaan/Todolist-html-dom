@@ -1,0 +1,26 @@
+/* @font-face */
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+:root {
+  --color-primary: #4f79ff;
+  --color-secondary: #f1f2f7;
+  --color-text: ;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  max-width: 114rem;
+  margin: 0 auto;
+}
