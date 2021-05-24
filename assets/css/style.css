@@ -176,6 +176,11 @@ progress {
   font-size: 1.4rem;
   text-transform: capitalize;
   color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.form-check__label:hover {
+  color: var(--color-primary);
 }
 .form-check__input {
   appearance: none;
@@ -187,6 +192,7 @@ progress {
   position: relative;
   vertical-align: middle;
   margin-right: 0.5rem;
+  cursor: pointer;
 }
 .form-check__label:nth-child(1) > .form-check__input {
   border-color: #9b59b6;
@@ -197,7 +203,23 @@ progress {
 .form-check__label:nth-child(3) > .form-check__input {
   border-color: #2ecc71;
 }
-.form-check__input::after {
+
+.form-check__label:nth-child(1) > .form-check__input:after {
+  background-color: #9b59b6;
+}
+.form-check__label:nth-child(2) > .form-check__input:after {
+  background-color: #e74c3c;
+}
+.form-check__label:nth-child(3) > .form-check__input:after {
+  background-color: #2ecc71;
+}
+.form-check__label:hover .form-check__input:after {
+  opacity: 1;
+}
+.form-check__input:checked:after {
+  opacity: 1;
+}
+.form-check__input:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -208,18 +230,6 @@ progress {
   background-color: var(--color-primary);
   border-radius: 50%;
   opacity: 0;
-}
-.form-check__label:nth-child(1) > .form-check__input:after {
-  background-color: #9b59b6;
-}
-.form-check__label:nth-child(2) > .form-check__input:after {
-  background-color: #e74c3c;
-}
-.form-check__label:nth-child(3) > .form-check__input:after {
-  background-color: #2ecc71;
-}
-.form-check__input:checked::after {
-  opacity: 1;
 }
 .team {
   padding: 1rem 2rem;
@@ -356,6 +366,7 @@ progress {
 .doing__list {
   list-style: none;
   max-height: 46.5rem;
+  min-height: 46.5rem;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -557,6 +568,7 @@ progress {
 }
 .complete__content {
   max-height: 46.5rem;
+  min-height: 46.5rem;
   overflow-y: scroll;
 }
 .complete__card {

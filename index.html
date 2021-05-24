@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List javascript</title>
-
+   
     <!-- ==========css fontawesome file============ -->
     <link rel="stylesheet" href="./assets/css/all.min.css" />
 
@@ -52,22 +52,7 @@
           </div>
           <div class="project">
             <h3 class="project__title">project</h3>
-            <form action="" class="form-check">
-              <label class="form-check__label" for="marketing">
-                <input type="radio" name="marketing" class="form-check__input" id="marketing" />
-                marketing
-              </label>
-              <label class="form-check__label" for="design">              
-                <input type="radio" name="marketing" class="form-check__input" id="design" />
-                 Design
-              </label>
-              <label class="form-check__label" for="development">               
-                <input type="radio" name="marketing" class="form-check__input" id="development" />
-                Development
-              </label>
-              <label class="form-check__label" for="management">            
-                <input type="radio" name="marketing" class="form-check__input" id="management" />
-                  Management
+            <form action="" class="form-check" id="form">
             </form>
           </div>
           <div class="team">
@@ -118,7 +103,7 @@
             <div class="doing">
               <div class="doing__header">
                 <div class="doing__select">
-                <select name="" id="" class="select">
+                <select name="" id="doing__select" class="select" onchange="filterCategory()">
                   <option value="marketing">MAKETING</option>
                   <option value="design">DESIGN</option>
                   <option value="development">DEVELOPMENT</option>
@@ -127,147 +112,8 @@
                 </div>
               </div>
               <div class="doing__content">
-                <ul class="doing__list">
-                  <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team-1.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/avatar.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team-2.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team-3.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team4.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                  <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team-1.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/avatar.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team-2.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team-3.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
-                   <li class="doing__item">
-                    <div class="doing__icon">
-                     <i class="fas fa-check"></i>
-                    </div>
-                    <div class="doing__text">
-                      <h3 class="doing__title">
-                        Create adWords campaign
-                      </h3> 
-                      <p class="doing__time">22 Feb ,2018</p>
-                    </div>
-                    <div class="doing__img-box">
-                      <img src="./assets/img/team4.jpg" alt="" class="doing__img">
-                    </div>
-                  </li>
+                <ul class="doing__list" id="doing__list">
+                 
                 </ul>
               </div>
               <div class="doing__footer">
@@ -300,105 +146,8 @@
                 </ul>
              </div>
              <div class="complete__content">
-               <div class="complete__card">
-                 <div class="complete__card-item">
-                   <div class="complete__card-icon">
-                     <i class="fas fa-check"></i>
-                   </div>
-                   <div class="complete__card-text">
-                     <h4 class="complete__card-title">write a acticle about design trends</h4>
-                     <span class="complete__card-time"><i class="far fa-clock"></i> 12 Mark ,2021</span>
-                     <p class="complete__card-content">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Distinctio velit voluptate id adipisci similique quam 
-                       perferendis saepe soluta pariatur modi?
-                     </p>
-                   </div>
-                 </div>
-                  <div class="complete__card-item">
-                   <div class="complete__card-icon">
-                     <i class="fas fa-check"></i>
-                   </div>
-                   <div class="complete__card-text">
-                     <h4 class="complete__card-title">write a acticle about design trends</h4>
-                     <span class="complete__card-time"><i class="far fa-clock"></i> 12 Mark ,2021</span>
-                     <p class="complete__card-content">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Distinctio velit voluptate id adipisci similique quam 
-                       perferendis saepe soluta pariatur modi?
-                     </p>
-                   </div>
-                 </div>
-                  <div class="complete__card-item">
-                   <div class="complete__card-icon">
-                     <i class="fas fa-check"></i>
-                   </div>
-                   <div class="complete__card-text">
-                     <h4 class="complete__card-title">write a acticle about design trends</h4>
-                     <span class="complete__card-time"><i class="far fa-clock"></i> 12 Mark ,2021</span>
-                     <p class="complete__card-content">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Distinctio velit voluptate id adipisci similique quam 
-                       perferendis saepe soluta pariatur modi?
-                     </p>
-                   </div>
-                 </div>
-                  <div class="complete__card-item">
-                   <div class="complete__card-icon">
-                     <i class="fas fa-check"></i>
-                   </div>
-                   <div class="complete__card-text">
-                     <h4 class="complete__card-title">write a acticle about design trends</h4>
-                     <span class="complete__card-time"><i class="far fa-clock"></i> 12 Mark ,2021</span>
-                     <p class="complete__card-content">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Distinctio velit voluptate id adipisci similique quam 
-                       perferendis saepe soluta pariatur modi?
-                     </p>
-                   </div>
-                 </div>
-                  <div class="complete__card-item">
-                   <div class="complete__card-icon">
-                     <i class="fas fa-check"></i>
-                   </div>
-                   <div class="complete__card-text">
-                     <h4 class="complete__card-title">write a acticle about design trends</h4>
-                     <span class="complete__card-time"><i class="far fa-clock"></i> 12 Mark ,2021</span>
-                     <p class="complete__card-content">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Distinctio velit voluptate id adipisci similique quam 
-                       perferendis saepe soluta pariatur modi?
-                     </p>
-                   </div>
-                 </div>
-                  <div class="complete__card-item">
-                   <div class="complete__card-icon">
-                     <i class="fas fa-check"></i>
-                   </div>
-                   <div class="complete__card-text">
-                     <h4 class="complete__card-title">write a acticle about design trends</h4>
-                     <span class="complete__card-time"><i class="far fa-clock"></i> 12 Mark ,2021</span>
-                     <p class="complete__card-content">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Distinctio velit voluptate id adipisci similique quam 
-                       perferendis saepe soluta pariatur modi?
-                     </p>
-                   </div>
-                 </div>
-                  <div class="complete__card-item">
-                   <div class="complete__card-icon">
-                     <i class="fas fa-check"></i>
-                   </div>
-                   <div class="complete__card-text">
-                     <h4 class="complete__card-title">write a acticle about design trends</h4>
-                     <span class="complete__card-time"><i class="far fa-clock"></i> 12 Mark ,2021</span>
-                     <p class="complete__card-content">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Distinctio velit voluptate id adipisci similique quam 
-                       perferendis saepe soluta pariatur modi?
-                     </p>
-                   </div>
-                 </div>
+               <div class="complete__card" id="complete__card">
+                 
 
                </div>
              </div>
@@ -428,19 +177,19 @@
                 <label for="" class="popup__label">
                   Task name
                 </label>
-                <input type="text" class="popup__input" placeholder="Enter task name">
+                <input type="text" class="popup__input " id="input__name" placeholder="Enter task name">
                </div>
                <div class="popup__group">
                 <label for="" class="popup__label">
                   Category
                 </label>
-                <div class="popup__select doing__select ">
-                  <select name="" id="" class="select">
-                  <option value="marketing">Marketing</option>
-                  <option value="design">design</option>
-                  <option value="development">development</option>
-                  <option value="management">management</option>
-                </select>
+                <div class="popup__select doing__select " >
+                  <select name="" class="select" id="select">
+                    <option value="marketing">Marketing</option>
+                    <option value="design">design</option>
+                    <option value="development">development</option>
+                    <option value="management">management</option>
+                  </select>
                 </div>
                </div>
               </div>
@@ -449,22 +198,22 @@
                 <label for="" class="popup__label">
                   Time
                 </label>
-                <input type="time" class="popup__input" min="0:00" max="100:59">
+                <input type="date" class="popup__input " id="input__time">
                </div>
                <div class="popup__group">
                 <label for="" class="popup__label">
                  Description
                 </label>
-                <input type="text" class="popup__input" placeholder="Enter description">
+                <input type="text" class="popup__input "  id ="input__description" placeholder="Enter description">
                </div>
               </div>
             </div>
-            <button class="doing__btn btn--add">Create new task</button>
+            <button class="doing__btn btn--add" onclick="addTask()">Create new task</button>
           </div>
           <span class="popup__close" onclick="popupToggle()"><i class="fas fa-times"></i></span>
         </div>
       </div>
     </div>
-    <script src="./assets/js/main.js"></script>
+     <script src="./assets/js/main.js"></script>
   </body>
 </html>
